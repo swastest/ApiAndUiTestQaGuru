@@ -30,7 +30,7 @@ public class TestBaseBugred {
 
         Configuration.browserSize = propertyBrowserSize;
         Configuration.baseUrl = propertyBaseUrl;
-        Configuration.remote = propertyRemoteUrl;
+    //    Configuration.remote = propertyRemoteUrl;
         RestAssured.baseURI = propertyBaseUri;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();

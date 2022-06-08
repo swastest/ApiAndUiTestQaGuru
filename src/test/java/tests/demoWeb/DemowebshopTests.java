@@ -10,7 +10,9 @@ import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import owner.LinksOwnerBug;
 import owner.LinksOwnerDemoWeb;
+import owner.RemoteOwner;
 import owner.UserOwner;
 import org.openqa.selenium.Cookie;
 
@@ -32,6 +34,16 @@ public class DemowebshopTests {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.baseUrl = linkConfig.uiURL();
         RestAssured.baseURI = linkConfig.apiURI();
+        RemoteOwner confRemote = ConfigFactory.create(RemoteOwner.class);
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()); //Алюр лисенер
+
+        String propertyBrowserSize = System.getProperty("browserSize", "1980x1024"),
+                propertyRemoteUrl = System.getProperty("remoteUrl", confRemote.url());
+
+
+        Configuration.browserSize = propertyBrowserSize;
+        Configuration.remote = propertyRemoteUrl;
+
     }
 
     @AfterEach
