@@ -1,4 +1,4 @@
-package tests.BugRed;
+package tests.bugRed;
 
 import com.codeborne.selenide.WebDriverRunner;
 import com.github.javafaker.Faker;

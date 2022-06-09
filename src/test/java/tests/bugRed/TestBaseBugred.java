@@ -1,4 +1,4 @@
-package tests.BugRed;
+package tests.bugRed;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
