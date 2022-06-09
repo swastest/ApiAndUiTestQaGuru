@@ -78,9 +78,14 @@ tasks.withType(Test) {
     }
 }
 
-//task payments(type: Test) {
-//    useJUnitPlatform {
-//        includeTags "payments"
-//    }
-//}
+task demoweb(type: Test) {
+    useJUnitPlatform {
+        includeTags "demoweb"
+    }
+}
+task bugred(type: Test) {
+    useJUnitPlatform {
+        includeTags "bugred"
+    }
+}
 

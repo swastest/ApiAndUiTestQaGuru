@@ -9,13 +9,14 @@ import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import owner.LinksOwnerBug;
 import owner.RemoteOwner;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
-
+@Tag("bugred")
 public class TestBaseBugred {
     @BeforeAll
     static void SetUp() {
@@ -30,7 +31,7 @@ public class TestBaseBugred {
 
         Configuration.browserSize = propertyBrowserSize;
         Configuration.baseUrl = propertyBaseUrl;
-    //    Configuration.remote = propertyRemoteUrl;
+        Configuration.remote = propertyRemoteUrl;
         RestAssured.baseURI = propertyBaseUri;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
