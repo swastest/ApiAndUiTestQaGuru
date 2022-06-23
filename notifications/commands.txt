@@ -1,0 +1,14 @@
+tgToken=5365564119:AAHNSPUFPWRkz8hFxy8Z5xTrExB7GIbEHso
+tgChat =-708951725
+222985724
+
+curl -X POST \
+     -H 'Content-Type: application/json' \
+     -d '{"chat_id": "-708951725", "text": "This is a test from curl", "disable_notification": false}' \
+     https://api.telegram.org/bot5365564119:AAHNSPUFPWRkz8hFxy8Z5xTrExB7GIbEHso/sendMessage
+
+java \
+"-DconfigFile=notifications/telegram.json" \
+-jar allure-notifications-4.1.jar
+
+java "-DconfigFile=notifications/telegram.json" -jar allure-notifications-4.1.jar
